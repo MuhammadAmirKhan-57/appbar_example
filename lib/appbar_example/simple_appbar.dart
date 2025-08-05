@@ -1,3 +1,4 @@
+import 'package:appbar_example/appbar_example/appbar_shape.dart';
 import 'package:flutter/material.dart';
 
 class AppBarScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class AppBarScreen extends StatelessWidget {
           icon: Icon(Icons.menu, color: Colors.white,)),
         backgroundColor: Colors.teal[300],
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward, color: Colors.white,))
+          IconButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarShapeChange())), icon: Icon(Icons.arrow_forward, color: Colors.white,))
         ],
       ),
       body: Center(
