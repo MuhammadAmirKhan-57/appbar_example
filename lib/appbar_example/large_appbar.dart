@@ -6,9 +6,7 @@ class LargeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          CustomScrollView(
+      body: CustomScrollView(
             slivers: [
               SliverAppBar.large(
                 leading: IconButton(
@@ -18,21 +16,19 @@ class LargeAppBar extends StatelessWidget {
                    title: Text('Large AppBar'),
                    actions: [
                     IconButton(onPressed: () {}, icon: Icon(Icons.more_vert_outlined))
-                   ],
+                   ],  
+                 backgroundColor: Colors.amber.shade50,  
+              ),
+              SliverToBoxAdapter(
+                child: Container(
+                  height: 380,
+                  width: 380,
+                  alignment: Alignment(0, 0),
+                  color: Colors.green.shade100,
+                  child: Text('Rest Of Code'),
+                ),
               )
             ],
-          ),
-          Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            'Here is simple appbar with  large size, leading, action.',
-            style: TextStyle(fontSize: 20, color: Colors.black),
-          ),
-        ),
-      ),
-        ],
-      ),
-    );
+          ));
   }
 }

@@ -1,3 +1,4 @@
+import 'package:appbar_example/appbar_example/large_appbar.dart';
 import 'package:flutter/material.dart';
 
 class AppBarShapeChange extends StatelessWidget {
@@ -16,7 +17,7 @@ class AppBarShapeChange extends StatelessWidget {
         backgroundColor: Colors.teal[300],
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => LargeAppBar())),
             icon: Icon(Icons.arrow_forward, color: Colors.white),
           ),
         ],
