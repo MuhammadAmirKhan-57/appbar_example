@@ -9,24 +9,29 @@ class AppBarScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('AppBar', style: TextStyle(
-          color: Colors.white
-        ),),
+        title: Text('AppBar', style: TextStyle(color: Colors.white)),
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.menu, color: Colors.white,)),
+          icon: Icon(Icons.menu, color: Colors.white),
+        ),
         backgroundColor: Colors.teal[300],
         actions: [
-          IconButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarShapeChange())), icon: Icon(Icons.arrow_forward, color: Colors.white,))
+          IconButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AppBarShapeChange()),
+            ),
+            icon: Icon(Icons.arrow_forward, color: Colors.white),
+          ),
         ],
       ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text('Here is simple appbar with\nbackgorud color, leading, action.', style: TextStyle(
-            fontSize: 20,
-            color: Colors.black,
-          ),),
+          child: Text(
+            'Here is simple appbar with\nbackgorud color, leading, action.',
+            style: TextStyle(fontSize: 20, color: Colors.black),
+          ),
         ),
       ),
     );
